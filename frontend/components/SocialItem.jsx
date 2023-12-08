@@ -54,6 +54,7 @@ const SocialItem = (props) => {
             <div className="mb-2">
                 <p>{post[1].message}</p>
                 <img width="368" src={arrayBufferToImgSrc(post[1].image)}/>
+                <p>{arrayBufferToImgSrc(post[1].image)}</p>
             </div>
             <div className={`${visible ? `flex` : `hidden`} flex-col items-center justify center w-full space-y-2 my-2`}>
                 <input className="border border-gray-500 px-2 w-full" type="text" value={message} onChange={(e) => setMessage(e.target.value)}/>

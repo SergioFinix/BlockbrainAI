@@ -13,6 +13,7 @@ async function readFileToArrayBuffer(file) {
 
     reader.onload = () => {
       resolve(reader.result)
+      console.log("entrando en onload");
     }
 
     reader.onerror = reject
@@ -23,6 +24,11 @@ async function readFileToArrayBuffer(file) {
 export async function fileToCanisterBinaryStoreFormat(file) {
   const arrayBuffer = await readFileToArrayBuffer(file)
   return Array.from(new Uint8Array(arrayBuffer))
+}
+
+export async function fileToCanisterBinaryStoreFormatXModel(file) {
+  const arrayBuffer = await readFileToArrayBuffer(file)
+  return Array.from(new Array(arrayBuffer))
 }
 
 const DefauttMaxWidth = 768

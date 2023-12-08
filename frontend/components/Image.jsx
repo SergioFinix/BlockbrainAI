@@ -21,7 +21,8 @@ const ImageSection = () => {
     maxFiles: 1,
     accept: {
       "image/png": [".png"],
-      "image/jpeg": [".jpg", ".jpeg"]
+      "image/jpeg": [".jpg", ".jpeg"],
+      "application/json":[".json"]
     },
     onDrop: async acceptedFiles => {
       if (acceptedFiles.length > 0) {
